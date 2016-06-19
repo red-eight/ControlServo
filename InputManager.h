@@ -11,6 +11,7 @@ public:
         initscr();
         raw();
         keypad(stdscr, TRUE);
+        nodelay(stdscr, TRUE);
         noecho();
     }
 
