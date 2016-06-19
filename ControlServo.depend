@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1466368712 source:/home/red-eight/Code/cpp/ControlServo/Driver.cpp
+	"InputManager.h"
+	<ncurses.h>
+
+1466368830 /home/red-eight/Code/cpp/ControlServo/InputManager.h
+	<ncurses.h>
+
