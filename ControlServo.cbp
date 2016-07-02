@@ -12,10 +12,7 @@
 				<Option type="1" />
 				<Option compiler="clang" />
 				<Compiler>
-					<Add option="-std=c++11" />
 					<Add option="-g" />
-					<Add option="-Wno-c++98-compat" />
-					<Add directory="serial/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lncurses" />
@@ -30,12 +27,16 @@
 					<Add option="-O2" />
 				</Compiler>
 				<Linker>
+					<Add option="-lncurses" />
 					<Add option="-s" />
 				</Linker>
 			</Target>
 		</Build>
 		<Compiler>
+			<Add option="-std=c++11" />
 			<Add option="-Weverything" />
+			<Add option="-Wno-c++98-compat" />
+			<Add directory="serial/include" />
 		</Compiler>
 		<Unit filename="Driver.cpp" />
 		<Unit filename="InputManager.h" />

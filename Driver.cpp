@@ -5,7 +5,6 @@
 #include "InputManager.h"
 #include <ncurses.h>
 
-
 #include <string>
 
 // ./ControlServo <serialPort>
