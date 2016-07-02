@@ -14,6 +14,8 @@
 				<Compiler>
 					<Add option="-std=c++11" />
 					<Add option="-g" />
+					<Add option="-Wno-c++98-compat" />
+					<Add directory="serial/include" />
 				</Compiler>
 				<Linker>
 					<Add option="-lncurses" />
@@ -37,6 +39,16 @@
 		</Compiler>
 		<Unit filename="Driver.cpp" />
 		<Unit filename="InputManager.h" />
+		<Unit filename="serial/include/serial/impl/unix.h" />
+		<Unit filename="serial/include/serial/impl/win.h" />
+		<Unit filename="serial/include/serial/serial.h" />
+		<Unit filename="serial/include/serial/v8stdint.h" />
+		<Unit filename="serial/src/impl/list_ports/list_ports_linux.cc" />
+		<Unit filename="serial/src/impl/list_ports/list_ports_osx.cc" />
+		<Unit filename="serial/src/impl/list_ports/list_ports_win.cc" />
+		<Unit filename="serial/src/impl/unix.cc" />
+		<Unit filename="serial/src/impl/win.cc" />
+		<Unit filename="serial/src/serial.cc" />
 		<Extensions>
 			<code_completion />
 			<debugger />

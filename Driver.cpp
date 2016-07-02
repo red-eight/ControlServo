@@ -1,10 +1,38 @@
+// "serial/serial.h" has to be above "InputManager.h" and <ncurses.h> because
+// <ncurses.h> has a macro named timeout.
+
+#include "serial/serial.h"
 #include "InputManager.h"
 #include <ncurses.h>
 
+
+#include <string>
+
+// ./ControlServo <serialPort>
 int main (int argc, char *argv [])
 {
     InputManager inputManager;
-    inputManager.PrintToScreen("Hello, world!" "\n");
+
+    if (argc < 2) {
+        inputManager.PrintToScreen("Usage: ./ControlServo <serialPort> [baudRate]" "\n");
+        return 1;
+    }
+
+    std::string const serialPort = argv [1];
+    unsigned const serialBaudRate = (argc >= 3) ? std::stoi (argv [2]) : 9600;
+    auto const timeout = serial::Timeout::simpleTimeout(1000);
+
+    serial::Serial arduino (serialPort, serialBaudRate, timeout);
+
+    if (!arduino.isOpen()) {
+        inputManager.PrintToScreen("Could not open serial port." "\n");
+        return 2;
+    }
+
+    inputManager.PrintToScreen(
+        "Hello! "
+        "Use the left and right arrow keys to control the servo motor." "\n"
+     );
 
     while(true)
     {
@@ -12,12 +40,12 @@ int main (int argc, char *argv [])
 
         if (key == KEY_LEFT)
         {
-            inputManager.PrintToScreen("Left key pressed." "\n");
+            arduino.write("L");
         }
 
         else if (key == KEY_RIGHT)
         {
-            inputManager.PrintToScreen("Right key pressed." "\n");
+            arduino.write("R");
         }
 
         else if (key == 'q' || key == 'Q')

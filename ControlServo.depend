@@ -1,8 +1,105 @@
 # depslib dependency file v1.0
-1466368712 source:/home/red-eight/Code/cpp/ControlServo/Driver.cpp
+1467421682 source:/home/red-eight/Code/cpp/ControlServo/Driver.cpp
+	"serial/serial.h"
 	"InputManager.h"
 	<ncurses.h>
+	<string>
 
 1466372965 /home/red-eight/Code/cpp/ControlServo/InputManager.h
 	<ncurses.h>
+
+1466375985 /home/red-eight/Code/cpp/ControlServo/serial/include/serial/serial.h
+	<limits>
+	<vector>
+	<string>
+	<cstring>
+	<sstream>
+	<exception>
+	<stdexcept>
+	<serial/v8stdint.h>
+
+1466375985 /home/red-eight/Code/cpp/ControlServo/serial/include/serial/v8stdint.h
+	<stddef.h>
+	<stdio.h>
+	<stdint.h>
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/impl/list_ports/list_ports_linux.cc
+	<vector>
+	<string>
+	<sstream>
+	<stdexcept>
+	<iostream>
+	<fstream>
+	<cstdio>
+	<cstdarg>
+	<cstdlib>
+	<glob.h>
+	<sys/types.h>
+	<sys/stat.h>
+	<unistd.h>
+	"serial/serial.h"
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/impl/list_ports/list_ports_osx.cc
+	<sys/param.h>
+	<stdint.h>
+	<CoreFoundation/CoreFoundation.h>
+	<IOKit/IOKitLib.h>
+	<IOKit/serial/IOSerialKeys.h>
+	<IOKit/IOBSD.h>
+	<iostream>
+	<string>
+	<vector>
+	"serial/serial.h"
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/impl/list_ports/list_ports_win.cc
+	"serial/serial.h"
+	<tchar.h>
+	<windows.h>
+	<setupapi.h>
+	<initguid.h>
+	<devguid.h>
+	<cstring>
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/impl/unix.cc
+	<stdio.h>
+	<string.h>
+	<sstream>
+	<unistd.h>
+	<fcntl.h>
+	<sys/ioctl.h>
+	<sys/signal.h>
+	<errno.h>
+	<paths.h>
+	<sysexits.h>
+	<termios.h>
+	<sys/param.h>
+	<pthread.h>
+	<linux/serial.h>
+	<sys/select.h>
+	<sys/time.h>
+	<time.h>
+	<AvailabilityMacros.h>
+	<mach/clock.h>
+	<mach/mach.h>
+	"serial/impl/unix.h"
+	<IOKit/serial/ioss.h>
+
+1466375985 /home/red-eight/Code/cpp/ControlServo/serial/include/serial/impl/unix.h
+	"serial/serial.h"
+	<pthread.h>
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/impl/win.cc
+	<sstream>
+	"serial/impl/win.h"
+
+1466375985 /home/red-eight/Code/cpp/ControlServo/serial/include/serial/impl/win.h
+	"serial/serial.h"
+	"windows.h"
+
+1466375985 source:/home/red-eight/Code/cpp/ControlServo/serial/src/serial.cc
+	<algorithm>
+	<alloca.h>
+	"serial/serial.h"
+	"serial/impl/win.h"
+	"serial/impl/unix.h"
 
